@@ -6,8 +6,37 @@ class Shopify
 
   # Get a product
   def self.get_product(id)
-    rsp = request(:get, "products/#{id}.json")
-    JSON.parse(rsp.body)['product']
+    result = request(:get, "products/#{id}.json")
+    result['product']
+  end
+
+  def self.get_products_id_title
+    request(:get, "products.json?fields=id,title")
+  end
+
+  def self.update_inventory(id, vid_quantities)
+    variants = vid_quantities.map do |vid, qty|
+      { "id" => vid, "inventory_quantity" => qty }
+    end
+    data = {
+      "product" => {
+        "variants" => variants
+      }
+    }
+    request(:put, "products/#{id}.json", body: data.to_json)
+  end
+
+  def self.set_product_metafield_map(id, namespace, key, map)
+    # convert the map to JSON so it fits in one metafield
+    data = {
+      "metafield" => {
+        "namespace" => namespace,
+        "key" => key,
+        "value" => map.to_json,
+        "value_type" => "string"
+      }
+    }
+    request(:post, "products/#{id}/metafields.json", body: data.to_json)
   end
 
   # Sends a request to Shopify, blocking until credits are available
@@ -16,13 +45,13 @@ class Shopify
     wait_for_credits
     response = Excon.new(File.join(@shopify_url, path), params).request(method: method)
     set_credits_remaining_from_response(response)
-    response
+    JSON.parse(response.body)
   end
 
   # Wait for API credits to be available
   def self.wait_for_credits
     while !obtain_credit
-      puts "Waiting 10 seconds for a credit"
+      # puts "Waiting 10 seconds for a credit"
       sleep(10)
     end
   end
@@ -34,7 +63,7 @@ class Shopify
     @lock.synchronize do
       if @credits_remaining > 5 # leave a buffer to be safe
         @credits_remaining = @credits_remaining - 1
-        puts "Obtained credit - credits remaining: #{@credits_remaining}"
+        # puts "Obtained credit - credits remaining: #{@credits_remaining}"
         true
       else
         false
@@ -49,7 +78,7 @@ class Shopify
     used, total = parse_credit_limit_from_response(response)
     @lock.synchronize do
       @credits_remaining = total - used
-      puts "Setting credits from response - credits remaining: #{@credits_remaining}"
+      # puts "Setting credits from response - credits remaining: #{@credits_remaining}"
     end
   end
 
