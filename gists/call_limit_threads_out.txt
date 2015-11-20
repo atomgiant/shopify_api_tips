@@ -1,0 +1,88 @@
+> 42.times.each { Thread.new { Shopify.get_product(2938468037) } }
+Obtained credit - credits remaining: 39
+Obtained credit - credits remaining: 38
+Obtained credit - credits remaining: 37
+Obtained credit - credits remaining: 36
+Obtained credit - credits remaining: 35
+Obtained credit - credits remaining: 34
+Obtained credit - credits remaining: 33
+Obtained credit - credits remaining: 32
+Obtained credit - credits remaining: 31
+Obtained credit - credits remaining: 30
+Obtained credit - credits remaining: 29
+Obtained credit - credits remaining: 28
+Obtained credit - credits remaining: 27
+Obtained credit - credits remaining: 26
+Obtained credit - credits remaining: 25
+Obtained credit - credits remaining: 24
+Obtained credit - credits remaining: 23
+Obtained credit - credits remaining: 22
+Obtained credit - credits remaining: 21
+Obtained credit - credits remaining: 20
+Obtained credit - credits remaining: 19
+Obtained credit - credits remaining: 18
+Obtained credit - credits remaining: 17
+Obtained credit - credits remaining: 16
+Obtained credit - credits remaining: 15
+Obtained credit - credits remaining: 14
+Obtained credit - credits remaining: 13
+Obtained credit - credits remaining: 12
+Obtained credit - credits remaining: 11
+Obtained credit - credits remaining: 10
+Obtained credit - credits remaining: 9
+Obtained credit - credits remaining: 8
+Obtained credit - credits remaining: 7
+Obtained credit - credits remaining: 6
+Obtained credit - credits remaining: 5
+Obtained credit - credits remaining: 4
+Obtained credit - credits remaining: 3
+Obtained credit - credits remaining: 2
+Obtained credit - credits remaining: 1
+Obtained credit - credits remaining: 0
+Waiting 10 seconds for a credit
+Waiting 10 seconds for a credit
+Setting credits from response - credits remaining: 38
+Setting credits from response - credits remaining: 33
+Setting credits from response - credits remaining: 34
+Setting credits from response - credits remaining: 39
+Setting credits from response - credits remaining: 27
+Setting credits from response - credits remaining: 35
+Setting credits from response - credits remaining: 28
+Setting credits from response - credits remaining: 29
+Setting credits from response - credits remaining: 37
+Setting credits from response - credits remaining: 31
+Setting credits from response - credits remaining: 36
+Setting credits from response - credits remaining: 32
+Setting credits from response - credits remaining: 25
+Setting credits from response - credits remaining: 24
+Setting credits from response - credits remaining: 26
+Setting credits from response - credits remaining: 23
+Setting credits from response - credits remaining: 21
+Setting credits from response - credits remaining: 17
+Setting credits from response - credits remaining: 20
+Setting credits from response - credits remaining: 22
+Setting credits from response - credits remaining: 18
+Setting credits from response - credits remaining: 19
+Setting credits from response - credits remaining: 14
+Setting credits from response - credits remaining: 16
+Setting credits from response - credits remaining: 11
+Setting credits from response - credits remaining: 15
+Setting credits from response - credits remaining: 13
+Setting credits from response - credits remaining: 13
+Setting credits from response - credits remaining: 9
+Setting credits from response - credits remaining: 10
+Setting credits from response - credits remaining: 10
+Setting credits from response - credits remaining: 8
+Setting credits from response - credits remaining: 7
+Setting credits from response - credits remaining: 6
+Setting credits from response - credits remaining: 4
+Setting credits from response - credits remaining: 5
+Setting credits from response - credits remaining: 3
+Setting credits from response - credits remaining: 2
+Setting credits from response - credits remaining: 1
+Setting credits from response - credits remaining: 30
+Obtained credit - credits remaining: 29
+Obtained credit - credits remaining: 28
+Setting credits from response - credits remaining: 17
+Setting credits from response - credits remaining: 16
+
